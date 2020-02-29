@@ -7,9 +7,12 @@ comments: false
 
 <div class="row justify-content-between">
     <div class="col-md-8 pr-5">
-        {% assign sorted_cats = site.categories | sort %}
-        {% for category in sorted_cats %}
-            <a href="#">{{ category[0] }}</a>
+
+        <!-- Get all the categories of posts with the tag video -->
+        {% assign video_categories =  site.posts | where:"tags","video" | map: 'categories' | join: ',' | join: ',' | split: ',' | sort | uniq %}
+
+        {% for video_category in video_categories %}
+            {{ video_category }}
             <br/>
         {% endfor %}
 
