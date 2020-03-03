@@ -5,7 +5,7 @@ description: "A collection of resources on tech, product and design"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl:
-google_analytics: 'UA-46278016-1'
+#google_analytics: 'UA-46278016-1'
 disqus: 'demowebsite'
 mailchimp-list:
 include: ["_pages"]
@@ -13,7 +13,7 @@ permalink: /:title/
 
 # Authors
 authors:
-  steve: 
+  steve:
     name: Steve
     display_name: Steve
     gravatar: dec391775823c0b69b0f7ed7084a569f
@@ -21,13 +21,15 @@ authors:
     web: https://www.stephenwilcock.com
     twitter: https://twitter.com/steve_wilcock
     description: ""
+
 # Plugins
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
+  - jekyll-paginate-v2
+#  - jekyll-paginate
 
 # Archives
 jekyll-archives:
@@ -38,8 +40,10 @@ jekyll-archives:
     category: '/category/:name/'
 
 # Pagination
-paginate: 6
-paginate_path: /page:num/
+pagination:
+  enabled: true
+  tag: blog
+  per_page: 6
 
 # Other
 markdown: kramdown
