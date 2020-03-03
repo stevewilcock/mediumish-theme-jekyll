@@ -1,11 +1,13 @@
 ---
 layout: default
 title: Home
+pagination: 
+  enabled: true
 ---
 
-{% if page.url == "/" %}
+{% if page.url == "/" or page.url == '/index.html' %}
 
-    {% assign featuredposts_array = site.posts | where:"featured","true" %}
+    {% assign featuredposts_array = site.posts |  where:"featured","true" %}
 
     {% if featuredposts_array.size > 0 %}
 
@@ -17,13 +19,15 @@ title: Home
             </div>
             <div class="row">
 
-                {% for post in site.posts %}
+                {% assign feature_array = site.posts | where_exp:"item","item.featured == true" %}
 
-                    {% if post.featured == true %}
+                {% for post in feature_array limit:2 %}
+
+                        {%if post.tags contains 'blog' %}
 
                         {% include featuredbox.html %}
 
-                    {% endif %}
+                        {% endif %}
 
                 {% endfor %}
 
@@ -40,7 +44,7 @@ title: Home
 
     <div class="section-title">
 
-        <h2><span>All Stories</span></h2>
+        <h2><span>All Posts</span></h2>
 
     </div>
 
