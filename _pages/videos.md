@@ -22,7 +22,7 @@ comments: false
                     {% endif %}
                 {% endfor %}
 
-                <a href="/videos/{{video_category | replace:" ","" | downcase }}">{{ video_category }}</a> [{{total}}]
+                <a href="/videos/{{video_category | replace:" ","" | downcase }}">{{ video_category }}</a> ({{total}})
                 <br/>
             {% endfor %}
 
