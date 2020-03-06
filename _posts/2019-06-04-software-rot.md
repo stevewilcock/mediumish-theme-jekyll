@@ -4,7 +4,8 @@ title:  "Technical rot: the missing metaphor"
 author: steve
 categories: [ Engineering, Management ]
 image: assets/images/rot.jpg
-featured: true
+featured: false
+tags: [ blog ]
 permalink: /blog/:title
 ---
 

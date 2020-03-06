@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Review: The Inmates are Running the Asylum"
+title:  "Book: The Inmates are Running the Asylum"
 author: steve
 categories: [ Design, Product Management, Management ]
-tags: [red, yellow]
+tags: [blog]
 image: assets/images/inmates.jpg
 description: "My review of Inception movie. Acting, plot and something else in this short description."
 featured: false
